@@ -25,7 +25,7 @@ console.log(data)
   return (
     <>
       <Helmet>
-        <title>Пользватели</title>
+        <title>Пользователи</title>
       </Helmet>
       <div className={"flex flex-row justify-end mt-2 mr-4 top-0 sticky z-10"}>
         <CallSupport/>
