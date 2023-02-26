@@ -91,12 +91,42 @@
     &::placeholder{
       font-weight: normal;
     }
-    @apply px-8 py-4 bg-lightGray rounded-md text-xl min-h-[60px] font-bold
+    @apply px-8 py-4 bg-lightGray rounded-md text-xl min-h-[60px] w-full font-bold text-primaryText dark:text-primaryText-dark
   }
   .primaryButton {
     @apply w-full bg-secondary px-8 py-3 text-white font-bold text-xl rounded-xl min-h-[60px]
   }
-  .testCard {
-
+  .deleteButton {
+    @apply transition disabled:bg-lightGray disabled:text-grayText dark:disabled:text-grayText-dark items-center justify-center px-4 py-2 border border-transparent font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-offset-2 sm:text-sm
+  }
+    .deleteButton-mutating {
+      background: linear-gradient(90deg, rgba(121, 121, 121, 0.48), rgba(0, 0, 0, 0), rgba(121, 121, 121, 0.48),);
+      background-size: 400% 400%;
+      background-clip: border-box;
+      animation: loading-clip 1.5s ease infinite;
+      @apply transition items-center justify-center px-4 py-2 font-medium rounded-md text-red-700 sm:text-sm text-primaryText dark:text-primaryText-dark
+    }
+  @keyframes loading-clip {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .adminNav {
+    @apply m-auto w-full flex justify-center gap-4 sticky bottom-4
+  }
+  .adminNav-btn {
+    @apply transition w-32 h-16 rounded-xl bg-grayText dark:bg-grayText-dark text-primaryText
+  }
+  .adminNav-btn-active {
+    @apply transition w-32 h-16 rounded-xl bg-secondary dark:bg-secondary text-white font-bold
+  }
+  .isUpdating {
+    @apply sticky top-8 text-primaryText dark:text-primaryText-dark
   }
 }

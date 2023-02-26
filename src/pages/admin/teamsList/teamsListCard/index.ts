@@ -1,0 +1,1 @@
+export {TeamsListCard} from './template'

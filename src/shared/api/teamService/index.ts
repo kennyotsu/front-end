@@ -1,0 +1,1 @@
+export {removeTeam} from './teamService'

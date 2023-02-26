@@ -1,0 +1,1 @@
+export {UserListCard} from './template'

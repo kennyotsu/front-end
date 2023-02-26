@@ -32,7 +32,7 @@ let navigate = useNavigate();
   useEffect(() => {
     applyThemePreference(theme);
 
-    navigate("/testbed");
+    navigate("/admin/users");
 
 }, [theme]);
   const user = {
