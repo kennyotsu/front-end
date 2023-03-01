@@ -47,12 +47,23 @@ export function ProjectsList() {
         <div className="max-w-3xl mx-auto ">
         <h2 className={"text-primaryText dark:text-primaryText-dark mb-8"}>Нажмите на карточку, чтобы скопировать ID</h2>
           <NewProject/>
+
+
+
+
+
           <AnimatePresence>
             {
               isLoading ? <motion.div className={"mb-4 shadow sm:rounded-lg bg-white px-4 py-5 sm:p-6"}>Загружаем...</motion.div> :
                 data.map((data, index) => <ProjectsListCard key={index} data={data} index={index}/>)
             }
           </AnimatePresence>
+
+
+
+
+
+
           <DeleteProject/>
           {isFetching ? <motion.div className={"isUpdating"}>Обновляем...</motion.div> : null}
           <div>{error ? `Ошибка при загрузке проектов: ${error}` : ""}</div>

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-import React, {useEffect, useState} from 'react';
-
+import React from 'react';
 
 export function ProjectsListCard(props) {
   const {key, id, name, team_id, link,is_approved} = props.data
